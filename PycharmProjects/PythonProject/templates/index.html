@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Пожарна система</title>
+</head>
+<body>
+    <h1>🔥 Сигнали за пожар</h1>
+
+    <form method="POST" action="/add">
+        <input type="text" name="location" placeholder="Въведи локация" required>
+        <button type="submit">Добави сигнал</button>
+    </form>
+
+    <ul>
+        {% for s in signals %}
+            <li>{{ s }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
